@@ -25,39 +25,41 @@ export default function ShowList() {
   );
 
   return (
-    <section className="container mx-auto shadow-lg py-4  lg:px-8 lg:py-4">
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-2 ">
+    <section className=" bg-gray-900 py-4  lg:px-8 lg:py-4">
+      <div className="container mx-auto shadow-lg grid lg:grid-cols-4 md:grid-cols-2 ">
         {image &&
           image.map(
             ({ template, showTitle, language, type, status }, index) =>
               template && (
-                <div className="rounded-md p-2">
+                <div className="rounded-md p-2 lg:w-full w-[90%] mx-auto">
                   <img
                     src={template}
                     alt="show-preview"
-                    className="h-[300px] w-full rounded-t-lg"
+                    className="h-[350px] lg:h-[300px] md:h-[300px] w-full rounded-t-lg"
                     key={index}
                   />
-                  <section className="p-3  bg-slate-300 rounded-b-md space-y-2">
+                  <section className="p-3  bg-slate-800 text-white rounded-b-lg space-y-2">
                     <div className="flex justify-between items-center ">
                       <h2 className="font-bold uppercase">{showTitle}</h2>
-                      <p className="text-gray-700 font-bold">{language}</p>
+                      <p className="font-bold">{language}</p>
                     </div>
-                    <h3 className="font-semibold text-gray-700">{type}</h3>
-                    <div
-                      className={`w-full text-center text-white uppercase font-bold rounded-full p-2 ${
-                        status === "Running" ? "bg-green-500" : "bg-red-500"
-                      }`}
-                    >
-                      {status}
-                    </div>
+                    <h3 className="font-semibold ">{type}</h3>
+                    <div className="flex lg:flex-col lg:gap-0 items-center gap-2">
+                      <div
+                        className={`w-full text-center text-white uppercase font-bold rounded-md p-2 ${
+                          status === "Running" ? "bg-green-500" : "bg-red-500"
+                        }`}
+                      >
+                        {status}
+                      </div>
 
-                    <button
-                      onClick={() => navigate(`/shows/${showTitle}`)}
-                      className="my-2 p-2 border bg-blue-500 rounded-full w-full text-white font-bold uppercase"
-                    >
-                      View Show Details
-                    </button>
+                      <button
+                        onClick={() => navigate(`/shows/${showTitle}`)}
+                        className="my-2 p-2  bg-blue-500 rounded-md w-full text-white  font-bold uppercase"
+                      >
+                        View Show Details
+                      </button>
+                    </div>
                   </section>
                 </div>
               )

@@ -22,11 +22,11 @@ export default function TicketForm({ name }) {
   return (
     <div>
       <form
-        className="mt-4 p-4 bg-slate-200 flex flex-col space-y-2 rounded-md shadow-lg"
+        className="mt-4 p-4 text-black bg-slate-800 flex flex-col space-y-2 rounded-md shadow-lg"
         onSubmit={handleSubmit}
       >
         <div className="flex gap-2  flex-col">
-          <h1>{name}</h1>
+          <h1 className="text-gray-300">{name}</h1>
           <h1 className="text-blue-500">Book Ticket</h1>
         </div>
 

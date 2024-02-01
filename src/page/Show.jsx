@@ -34,8 +34,8 @@ export default function Show() {
         </nav>
       </header>
 
-      <main className="container mx-auto py-12">
-        <section className="py-8 flex lg:flex-row flex-col  gap-2">
+      <main className=" py-12 bg-gray-900 min-h-screen text-white">
+        <section className="container mx-auto py-8 flex lg:flex-row flex-col  gap-2">
           <img
             src={image && image.medium}
             alt={name}
@@ -43,7 +43,7 @@ export default function Show() {
           />
           <div className="m-4">
             <h1 className="text-3xl font-semibold mb-4">{name}</h1>
-            <p className="text-gray-700">{cleanSummary(summary)}</p>
+            <p className="text-gray-300">{cleanSummary(summary)}</p>
             <div className="flex items-center mt-4">
               <FontAwesomeIcon icon={faClock} className="mr-2" />
               <span>{runtime} min</span>
