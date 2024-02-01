@@ -20,14 +20,6 @@ export default function Show() {
 
   const { name, summary, runtime, rating, genres, officialSite, image } = data;
 
-  // Function to handle form submission
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    // Logic to handle form submission
-    setShowForm(false); // Close the form after submission
-  };
-
-  // Function to clean up summary text
   const cleanSummary = (summary) => {
     return summary ? summary.replace(/<[^>]*>/g, "") : "";
   };
