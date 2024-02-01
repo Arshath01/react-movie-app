@@ -41,7 +41,7 @@ export default function Show() {
             alt={name}
             className="h-[400px] w-[400px] shadow-lg border rounded-lg"
           />
-          <div className="m-4">
+          <div className="m-4 md:ml-0">
             <h1 className="text-3xl font-semibold mb-4">{name}</h1>
             <p className="text-gray-300">{cleanSummary(summary)}</p>
             <div className="flex items-center mt-4">

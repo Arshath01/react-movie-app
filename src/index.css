@@ -10,5 +10,5 @@ h1{
     @apply text-2xl font-bold;
 }
 input{
-    @apply p-2 rounded-md shadow-md;
+    @apply p-2 rounded-md shadow-md py-2;
 }

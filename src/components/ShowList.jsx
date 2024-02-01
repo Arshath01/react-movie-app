@@ -57,7 +57,7 @@ export default function ShowList() {
                         onClick={() => navigate(`/shows/${showTitle}`)}
                         className="my-2 p-2  bg-blue-500 rounded-md w-full text-white  font-bold uppercase"
                       >
-                        View Show Details
+                        Details
                       </button>
                     </div>
                   </section>
