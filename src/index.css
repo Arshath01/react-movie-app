@@ -7,7 +7,7 @@ body{
 }
 
 h1{
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold p-1;
 }
 input{
     @apply p-2 rounded-md shadow-md py-2;
