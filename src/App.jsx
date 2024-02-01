@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./page/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Show from "./page/Show";
+import "./index.css";
 
 export default function App() {
   return (
